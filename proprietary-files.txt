@@ -21,6 +21,10 @@ vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
 vendor/lib/libqmi.so
 
+# QSEEcom - J500HXXU2BQC4_J500HOXE2BQC2_CAU
+bin/qseecomd:e901e0ca7ffa5888e4407ba8cbd209129d6dfa05c22c50db92f40e3ff035b0c0
+vendor/lib/libQSEEComAPI.so:ea9511b3cb7a5aa6c90526a02d37733fb64e9c2bbf58f58e14d32c625da7dc3e
+
 # Camera
 etc/H13QL_s5k3l2xx_module_info.xml
 etc/B05QL_s5k5e3yx_module_info.xml
