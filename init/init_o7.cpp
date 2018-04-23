@@ -31,16 +31,8 @@
 
 void init_target_properties(void)
 {
-	char *bootloader_str = NULL;
-	char *build_id = NULL;
 	char *device = NULL;
 	char *model = NULL;
-	char *name = NULL;
-	char *operator_alpha = NULL;
-	char *operator_numeric = NULL;
-	char *version_release = NULL;
-
-	int network_type = 1;
 
 	/* get the bootloader string */
 	std::string bootloader = android::base::GetProperty("ro.bootloader", "");
@@ -48,18 +40,12 @@ void init_target_properties(void)
 	if (bootloader.find("G600FY") == 0) {
 		device = (char *)"o7prolte";
 		model = (char *)"SM-G600FY";
-		name = (char *)"o7prolte";
-		network_type=LTE_DEVICE;
+		set_lte_properties();
 	}
 	else {
 		return;
 	}
 
-	/* make sure device name is set */
-	if (name == NULL)
-		name = device;
-
 	/* set the properties */
-	set_target_properties(build_id, bootloader_str, name, device, model,
-		       network_type, operator_alpha, operator_numeric, version_release);
+	set_target_properties(device, model);
 }
