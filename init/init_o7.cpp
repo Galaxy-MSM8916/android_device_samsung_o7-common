@@ -42,6 +42,11 @@ void init_target_properties(void)
 		model = (char *)"SM-G600FY";
 		set_lte_properties();
 	}
+	else if (bootloader.find("G6000") == 0) {
+		device = (char *)"on7ltechn";
+		model = (char *)"SM-G6000";
+		set_lte_properties();
+	}
 	else {
 		return;
 	}

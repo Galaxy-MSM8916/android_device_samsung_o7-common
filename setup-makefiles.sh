@@ -19,7 +19,7 @@
 set -e
 
 # Required!
-export DEVICES=o7prolte
+export DEVICES="o7prolte on7ltechn"
 export DEVICE_COMMON=o7-common
 export BOARD_COMMON=msm8916-common
 export VENDOR=samsung
