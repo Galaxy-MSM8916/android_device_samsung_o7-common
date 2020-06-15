@@ -1,3 +1,0 @@
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_o7
-TARGET_RECOVERY_DEVICE_MODULES := libinit_o7
