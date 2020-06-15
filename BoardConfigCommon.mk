@@ -18,5 +18,20 @@ include device/samsung/msm8916-common/BoardConfigCommon.mk
 
 LOCAL_PATH := device/samsung/o7-common
 
-# Include board config fragments
-include $(LOCAL_PATH)/board/*.mk
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
+TARGET_SPECIFIC_HEADER_PATH += $(LOCAL_PATH)/include
+
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_o7
+TARGET_RECOVERY_DEVICE_MODULES := libinit_o7
+
+# Lights
+TARGET_PROVIDES_LIBLIGHT := false
+
+# RIL
+BOARD_MODEM_TYPE := xmm7260
+BOARD_PROVIDES_LIBRIL := true
+
+# Wifi
+BOARD_HAVE_SAMSUNG_WIFI := true
