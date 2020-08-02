@@ -36,10 +36,6 @@ endif
 # Inhert dalvik heap values from aosp
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
-# Camera
-PRODUCT_PACKAGES += \
-	Camera2
-
 # Doze
 PRODUCT_PACKAGES += \
 	SamsungDoze
